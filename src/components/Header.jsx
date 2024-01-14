@@ -12,7 +12,6 @@ import { CgClose } from "react-icons/cg";
 
 import { Context } from "../context/contextApi";
 import Loader from "../shared/Loader";
-import { AvatarGenerator } from 'random-avatar-generator';
 
 const Header = () => {
 //   console.log('Header called')
@@ -21,9 +20,6 @@ const Header = () => {
     const { loading, mobileMenu, setMobileMenu } = useContext(Context);
 
     const navigate = useNavigate();
-    
-    const generator = new AvatarGenerator();
-    const avatarUrl = generator.generateRandomAvatar();
 
     const searchQueryHandler = (event) => {
         if (
@@ -103,7 +99,7 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="flex h-8 w-8 overflow-hidden rounded-full md:ml-4">
-                    <img src={avatarUrl} />
+                    <img src="https://xsgames.co/randomusers/assets/avatars/female/10.jpg" />
                 </div>
             </div>
         </div>

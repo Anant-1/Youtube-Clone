@@ -18,7 +18,7 @@ var options = {
 export const fetchDataFromApi = async(url) =>{
   try{
     const searchQuery = `${base_url}/${url}`
-    console.log('search url: ', searchQuery)
+    // console.log('search url: ', searchQuery)
     const response = await fetch(searchQuery, options);
     return response.json();
   }catch(error){
